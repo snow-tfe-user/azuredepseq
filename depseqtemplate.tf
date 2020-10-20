@@ -107,7 +107,7 @@ resource "azurerm_linux_virtual_machine" "vml" {
 }
 
 resource "azurerm_windows_virtual_machine" "vmw" {
-  name                  = "vm3-${random_id.server.hex}"
+  name                  = "vm3Win"
   location              = "${azurerm_resource_group.rg.location}"
   resource_group_name   = "${azurerm_resource_group.rg.name}"
   network_interface_ids = [azurerm_network_interface.nic[2].id]
